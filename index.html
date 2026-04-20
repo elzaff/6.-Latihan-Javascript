@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWEB Week 6</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="top-nav">
+        <div class="brand-wrap">
+            <div class="brand-icon" aria-hidden="true"></div>
+            <p class="brand-text">PWEB Week 6</p>
+        </div>
+        <nav class="nav-links" aria-label="Navigasi tugas">
+            <a class="nav-link" href="#tugas-1">Tugas Form</a>
+            <a class="nav-link" href="#tugas-2">Tugas Kode Pos</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="task-card" id="tugas-1">
+            <div class="task-head">
+                <span class="task-badge">Tugas Form</span>
+                <h2>Form Registrasi Mahasiswa</h2>
+            </div>
+
+            <form id="registrationForm" class="form-grid" autocomplete="off">
+                <div class="field field-wide">
+                    <label for="studentName">Nama Mahasiswa</label>
+                    <div class="autocomplete-wrap">
+                        <input id="studentName" name="studentName" type="text"
+                            placeholder="Ketik minimal 2 huruf, contoh: An..." required aria-describedby="nameHelp" />
+                        <ul id="nameSuggestions" class="suggestions hidden" role="listbox"></ul>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="nrp">NRP</label>
+                    <input id="nrp" name="nrp" type="text" inputmode="numeric" minlength="10" maxlength="12"
+                        placeholder="Contoh: 5054XXXXXX" required />
+                </div>
+
+                <div class="field">
+                    <label for="courseSelect">Mata Kuliah</label>
+                    <select id="courseSelect" name="courseSelect" required>
+                        <option value="">Pilih mata kuliah...</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="lecturerSelect">Dosen</label>
+                    <select id="lecturerSelect" name="lecturerSelect" disabled required>
+                        <option value="">Pilih mata kuliah dulu</option>
+                    </select>
+                </div>
+
+                <button class="btn-main" type="submit">Daftarkan Sekarang</button>
+            </form>
+
+            <div id="registrationResult" class="result-box empty">
+                Belum ada data registrasi yang dikirim.
+            </div>
+        </section>
+
+        <section class="task-card" id="tugas-2">
+            <div class="task-head">
+                <span class="task-badge">Tugas Kode Pos</span>
+                <h2>Pencarian Kode Pos Indonesia</h2>
+            </div>
+
+            <form id="postalForm" class="form-grid" autocomplete="off">
+                <div class="field">
+                    <label for="provinceSelect">Provinsi</label>
+                    <select id="provinceSelect" name="provinceSelect" required>
+                        <option value="">Memuat data provinsi...</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="regencySelect">Kabupaten / Kota</label>
+                    <select id="regencySelect" name="regencySelect" disabled required>
+                        <option value="">Pilih provinsi dulu</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="districtSelect">Kecamatan</label>
+                    <select id="districtSelect" name="districtSelect" disabled required>
+                        <option value="">Pilih kabupaten / kota dulu</option>
+                    </select>
+                </div>
+
+                <button class="btn-main" type="submit">Cari Kode Pos</button>
+            </form>
+
+            <div id="postalResult" class="result-box empty">
+                Pilih provinsi, kabupaten/kota, dan kecamatan untuk menampilkan kode pos.
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>5054241020 - Tugas PWEB Week 6</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
