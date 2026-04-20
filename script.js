@@ -158,7 +158,8 @@ const fallbackPostalRows = [
         postalCodes: ["76113", "76114", "76115", "76116"],
         villages: ["Damai", "Gunung Bahagia", "Sepinggan", "Sungai Nangka"],
         timezone: "WITA"
-    }
+    },
+
 ];
 
 const regionApiBase = "https://www.emsifa.com/api-wilayah-indonesia/api";
